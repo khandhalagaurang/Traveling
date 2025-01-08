@@ -14,7 +14,6 @@ function NavbarComponent() {
             <Nav.Link className=' ms-3' href="/FlightList">FlightList</Nav.Link>
           </Nav>
           <Nav.Link href="/Login">Login</Nav.Link>
-          <Nav.Link className='ms-3' href="/Register">Register</Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

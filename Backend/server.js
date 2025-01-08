@@ -15,14 +15,14 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Routes
+// Routes 
 app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes);
 
 
 mongoose.connect("mongodb://localhost:27017")
 
-const PORT =  8000;
+const PORT = 8000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server Started on http://localhost:${PORT}`)
 });
