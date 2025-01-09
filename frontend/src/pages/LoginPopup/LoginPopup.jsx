@@ -38,12 +38,12 @@ const LoginPopup = ({ setShowLogin }) => {
             if (response.data.success) {
                 localStorage.setItem("token", response.data.token);
 
-                // If it's a sign-up request, switch to login after successful account creation
-                if (currState === "Sing up") {
-                    setCurrState("Login"); // Switch to login after sign-up
+
+                if (currState === "Register user") {
+                    setCurrState("Login");
                 }
             } else {
-                alert(response.data.message); // Fixed typo "massage" to "message"
+                alert(response.data.message);
             }
         } catch (error) {
             console.error("Error:", error);
@@ -89,7 +89,7 @@ const LoginPopup = ({ setShowLogin }) => {
                     />
                 </div>
                 <button type="submit">
-                    {currState === "Sing up" ? "Create account" : "Login"}
+                    {currState === "Register user" ? "Create account" : "Login"}
                 </button>
                 <div className="login-popup-condition">
                     <input type="checkbox" required />
@@ -98,7 +98,7 @@ const LoginPopup = ({ setShowLogin }) => {
                 {currState === "Login" ? (
                     <p>
                         Create a new account?{" "}
-                        <span onClick={() => setCurrState("Sing up")}>Click here</span>
+                        <span onClick={() => setCurrState("Register user")}>Click here</span>
                     </p>
                 ) : (
                     <p>

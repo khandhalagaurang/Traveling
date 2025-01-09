@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Navabar from './components/Navabar';
-import BookingForm from './components/BookingForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HotelList from './components/HotelList';
-import FlightList from './components/FlightList';
-import Login from './LoginPopup/LoginPopup'
+import Navabar from './components/Navabar';
+import BookingForm from '../src/pages/BookingFrom/BookingForm';
+import HotelList from '../src/pages/HotelBooking/HotelBooking';
+import FlightList from '../src/pages/FlightBooking/FlightBooking';
+import Login from '../src/pages/LoginPopup/LoginPopup'
 
 function App() {
 
